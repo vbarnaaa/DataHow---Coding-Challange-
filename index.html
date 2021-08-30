@@ -4,8 +4,21 @@
 	<meta charset="utf-8">
 	<title>COVID-19 charts</title>
 </head>
+<script>
+//function selectCountry() {
+//const mylist = document.getElementById("countDrop");
+//document.getElementById("selCountry").value = mylist.options[mylist.selectedIndex].text;
+//}
+</script>
 <body>
 	<h1>COVID 19 DATA</h1>
+
+	<label for="countries">Choose a country to display</label>
+  		<select name="countries" id="countDrop" onchange="selectCountry()">
+
+ 		</select>
+ 	<canvas id="myChart" width="400" height="400"></canvas>
+
 	
 <script type="text/javascript" src="js/index.js"></script>
 </body>
