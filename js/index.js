@@ -1,8 +1,9 @@
 		const x = [];
-		const deaths = [];
-		const active = [];
+		let sumA = 0;
+		let sumD = 0;
+		let popp = 0;
 		let newAPI = 'https://covid-api.com/api/reports?2021-08-31&iso=USA';
-		
+
 		
 
 /****************** GET THE DAYS OF THE LAST 90 DAYS *****************************/
@@ -36,8 +37,9 @@
 					select.appendChild(option);
 				}
 		}
-/****************** CONSTRACT NEW API (COUNTRY, DATE) ********************/
+/****************** CONSTRACT NEW API (COUNTRY, DATE, POPULATION) ********************/
 		
+
 		
 
 		function getNewAPI() {
@@ -45,18 +47,34 @@
 			const selectedCountry = countDrop.options[countDrop.selectedIndex].value;
 			const selectedDate = dateDrop.options[dateDrop.selectedIndex].value;
 			newAPI = (`https://covid-api.com/api/reports?${selectedDate}&iso=${selectedCountry}`);
-			console.log(newAPI);
-			getData();
+			//console.log(newAPI)
+			
+		
+		getData();
 		async function getData() {
 				const response = await fetch(newAPI);
 				const data = await response.json();	
-				//deaths = data.deaths;
-				//const obj = JSON.parse(data);
-				console.log(data.data[0].deaths,
-							data.data[0].active);
-
-
+				//console.log(data);
+				
+					let a=0; let d = 0;
+					for (let i = 0; i < data.data.length; i++){
+					d += data.data[i].deaths_diff;
+					a += data.data[i].confirmed_diff;
+			  	}
+			  	sumA = a;
+			  	sumD = d;
+			  	isOn = true;
 			}
+			const pop = (`https://restcountries.eu/rest/v2/alpha/${selectedCountry.toLowerCase()}`);
+			console.log(pop);
+
+		getPop();
+		async function getPop() {
+				const response = await fetch(pop);
+				const data = await response.json();
+				popp = data.population;
+				}
+			
 		}
-		
-		
+
+			
