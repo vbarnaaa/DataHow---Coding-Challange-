@@ -1,0 +1,111 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", sans-serif;
+	overflow: hidden;
+}
+/************************ NAVIGATION BAR ********************************************************/
+.sidenav {
+  height: 0;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(20,20,20,0.01);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#close {
+  text-decoration: none;
+  font-size: 50px;
+  color: #fe0002d4;/*#*/
+  display: block;
+  transition: 0.3s;
+  align-items: flex-end; 
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+img{
+
+  max-width: 50px;
+  margin: 10px 0 0 10px;
+}
+
+#header{
+  display: flex;
+}
+
+
+/**************************** DROWPDOWN *************************************************/ 
+
+select {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 1em 0 0;
+  margin: 20px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: inherit;
+  line-height: inherit;
+  width: 200px;
+  justify-content: center;
+}
+
+input{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.center{
+  margin-top: 20vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/************************************************ FOOTER ***********************************/
+
+#adat{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 101vw;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding-left: 20px;
+  font-size: 15px;
+  color: #394b8c;
+  text-shadow: 0.2px 0.2px #ffffff;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.col-3{
+  text-align: right;
+}
+#covid{
+  padding-right: 10px;
+}
+
+#link{
+  color: grey;
+}
+
+
+

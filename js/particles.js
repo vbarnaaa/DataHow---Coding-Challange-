@@ -1,4 +1,5 @@
-//https://www.oreilly.com/library/view/you-dont-know/9781491905142/ch04.html
+//PARTICLES 'BLUEPRINT' FOR POPULATION
+
 class Particle {
 
   constructor(){
@@ -24,17 +25,9 @@ class Particle {
     this.x+=this.xSpeed;
     this.y+=this.ySpeed;
   }
-/*
-  joinParticles(particles) {
-    particles.forEach(element =>{
-      let dis = dist(this.x,this.y,element.x,element.y);
-      if(dis<85) {
-        stroke(200);
-        line(this.x,this.y,element.x,element.y);
-      }
-    });
-  }*/
 }
+
+//PARTICLES 'BLUEPRINT' FOR NEW CASES
 
 class Active {
   constructor(){
@@ -48,7 +41,7 @@ class Active {
 
   createActive() {
     noStroke();
-    fill('rgba(255,16,16,0.8)');
+    fill('#ff2600');
     circle(this.x,this.y,this.r);
   }
 
@@ -60,17 +53,9 @@ class Active {
     this.x+=this.xSpeed;
     this.y+=this.ySpeed;
   }
-/*
-  joinActive(active) {
-    active.forEach(element =>{
-      let dis = dist(this.x,this.y,element.x,element.y);
-      if(dis<85) {
-        stroke('rgba(255,55,55,0.1)');
-        line(this.x,this.y,element.x,element.y);
-      }
-    });
-  }*/
 }
+
+//PARTICLES 'BLUEPRINT' FOR NEW DEATHS
 
 class Deaths {
   constructor(){
@@ -96,14 +81,6 @@ class Deaths {
     this.x += this.xSpeed;
     this.y += this.ySpeed;
   }
-/*
-  joinDeaths(deaths) {
-    deaths.forEach(element =>{
-      let dis = dist(this.x,this.y,element.x,element.y);
-      if(dis<85) {
-        stroke('rgba(55,55,255,0.1)');
-        line(this.x,this.y,element.x,element.y);
-      }
-    });
-  }*/
 }
+
+

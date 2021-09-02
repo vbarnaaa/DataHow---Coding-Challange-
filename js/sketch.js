@@ -3,69 +3,68 @@ let particles = [];
 let active = [];
 let deaths = [];
 let isOn = false;
-
-
+          
+/******** INITIALIZE THE PARTICLE SYSTEM ON LOAD ***************************/
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-
-  
     for ( let i = 0; i < 100; i++){
-      active.push(new Active());
+      active.push(new Active());                // NEW CASES
     }
 
     for (let i = 0; i < 300; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle());           // POPULATION
     }
 
     for (let i = 0; i < 10; i++) {
-      deaths.push(new Deaths());
+      deaths.push(new Deaths());                // DEATHS
     }
 
 }
+
+/******** LOOP THAT LISTENS TO CHANGES ***************************/
 
 function draw() {
   background(252);
 
+/******** DELETING OLD AND ADDING NEW PARTICLES WHEN 'SUBMIT' CLICKED ***************************/
+
     if (isOn === true) {
-        particles = [];active = [];deaths = [];
-        //console.log(sumA, sumD);
-        for ( let i = 0; i < sumA/100; i++){
+        
+        particles = [];active = [];deaths = []; // clear the array of previous particles
+
+        for ( let i = 0; i < sumA/100; i++){    // creating an array of 'new cases' with number of new cases divided by 100
           active.push(new Active());
-
         }
-
-        for (let i = 0; i < popp/500000; i++) {
-          particles.push(new Particle());
+        for (let i = 0; i < popp/500000; i++) { 
+          particles.push(new Particle());       // creating an array of 'populations' with number of country total population divided by 500 000
         }
-
         for (let i = 0; i < sumD; i++) {
-          deaths.push(new Deaths());
+          deaths.push(new Deaths());            // creating an array of 'deaths' with the number of new deaths
         }
-        isOn = false;
+        isOn = false;                           // disable function after arrays are generated
      }
+
+/******** CREATING PARTICLE ***************************************/
 
   for(let i = 0;i<particles.length;i++) {
     particles[i].createParticle();
     particles[i].moveParticle();
-    //particles[i].joinParticles(particles.slice(i));
   }
   for(let i = 0;i<active.length;i++) {
     active[i].createActive();
     active[i].moveActive();
-    //active[i].joinActive(active.slice(i));
   }
   for(let i = 0;i<deaths.length;i++) {
     deaths[i].createDeaths();
     deaths[i].moveDeaths();
-    //deaths[i].joinDeaths(deaths.slice(i));
   }
 
-
-    text("Active Cases: " + sumA, 10, 50)
-    text("Deaths That Day: " + sumD, 10, 100)
-    text("Population: " + popp, 10, 150)
-    textSize(32);
-    //storke(20);
 }
 
+/******** OPEN NAVIGATION BAR ON MOUSECLICK ***************************/
+
+function mousePressed(){
+  openNav();
+}
+        
