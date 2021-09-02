@@ -44,7 +44,6 @@ body{
 }
 
 img{
-
   max-width: 50px;
   margin: 10px 0 0 10px;
 }
@@ -101,6 +100,23 @@ input{
 }
 #covid{
   padding-right: 10px;
+}
+
+.colorBox{
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+#dotA{
+  background: #ff2600;
+}
+#dotD{
+  background: rgba(55,16,55,0.9);
+}
+#dotP{
+  background: rgba(20,16,69,0.3); 
 }
 
 #link{
