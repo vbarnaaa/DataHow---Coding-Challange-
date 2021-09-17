@@ -6,5 +6,5 @@ Visualizing Covid-19 data with particle system
 demo:
 [barnabasvarszegi.com/covid](barnabasvarszegi.com/covid)
 
-![covid-visualization](https://github.com/vbarnaaa/DataHow---Coding-Challange-/blob/main/img/Capture2.PNG?raw=true)
-![covid-visualization](https://github.com/vbarnaaa/DataHow---Coding-Challange-/blob/main/img/Capture1.PNG?raw=true)
+![covid-visualization](https://github.com/vbarnaaa/DataHow---Coding-Challange-/blob/main/img/Capture2.PNG)
+![covid-visualization](https://github.com/vbarnaaa/DataHow---Coding-Challange-/blob/main/img/Capture1.PNG)
