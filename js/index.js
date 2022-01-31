@@ -77,10 +77,10 @@
 							morto.push(parseInt(dd[1]))
 							actuato.push(parseInt(aa[4]))
 						}
-						
-						sumD = Math.round((morto.reduce((a, b) => a + b, 0) / morto.length) / 1000);
-						sumA = Math.round((actuato.reduce((a, b) => a + b, 0) / actuato.length) / 1000);
-						popp = 1000 - sumA - sumD;
+						console.log(actuato, morto)
+						sumD = Math.round((morto.reduce((a, b) => a + b, 0) / morto.length));
+						sumA = Math.round((actuato.reduce((a, b) => a + b, 0) / actuato.length));
+						popp = 1000000 - sumA - sumD;
 						console.log(popp, sumA, sumD)
 						let activeCases;
 						let deathsTD;
@@ -90,11 +90,10 @@
 							deathsTD = "'no data'";
 							popul = "'no data'";
 						} else {
-							activeCases = `${sumA} / 1 million`;
-							deathsTD = `${sumD} / 1 million`;
-							popul = data.response[0].population;
+							activeCases = `${sumA.toLocaleString()}  / 1 million`;
+							deathsTD = `${sumD.toLocaleString()}  / 1 million`;
+							popul = data.response[0].population.toLocaleString();
 						}
-						
 				isOn = true;
 				document.getElementById('active').innerText = (`Active Cases: ${activeCases}`);
 				document.getElementById('deaths').innerText = (`Deaths that day: ${deathsTD}`);

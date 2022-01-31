@@ -25,7 +25,10 @@ body{
   justify-content: center;
   align-items: center;
   z-index: 0;
-  
+}
+
+.click-text > p {
+  cursor: default;
 }
 
 #close {
