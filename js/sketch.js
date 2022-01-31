@@ -8,15 +8,15 @@ let isOn = false;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-    for ( let i = 0; i < 100; i++){
+    for ( let i = 0; i < 56; i++){
       active.push(new Active());                // NEW CASES
     }
 
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 940; i++) {
       particles.push(new Particle());           // POPULATION
     }
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 3; i++) {
       deaths.push(new Deaths());                // DEATHS
     }
 
@@ -33,10 +33,10 @@ function draw() {
         
         particles = [];active = [];deaths = []; // clear the array of previous particles
 
-        for ( let i = 0; i < sumA/100; i++){    // creating an array of 'new cases' with number of new cases divided by 100
+        for ( let i = 0; i < sumA; i++){    // creating an array of 'new cases' with number of new cases divided by 100
           active.push(new Active());
         }
-        for (let i = 0; i < popp/500000; i++) { 
+        for (let i = 0; i < popp; i++) { 
           particles.push(new Particle());       // creating an array of 'populations' with number of country total population divided by 500 000
         }
         for (let i = 0; i < sumD; i++) {

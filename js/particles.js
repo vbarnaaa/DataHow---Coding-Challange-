@@ -61,7 +61,7 @@ class Deaths {
   constructor(){
     this.x = random(0,width);
     this.y = random(0,height);
-    this.r = random(7,15);
+    this.r = random(12,15);
     this.xSpeed = random(-0.1,0.1);
     this.ySpeed = random(-0.1,0.1);
   }
