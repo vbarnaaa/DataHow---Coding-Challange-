@@ -66,6 +66,10 @@ img{
   display: flex;
 }
 
+#flag{
+  font-size: 40px;
+}
+
 
 /**************************** DROWPDOWN *************************************************/ 
 
@@ -107,14 +111,14 @@ input{
   text-shadow: 0.2px 0.2px #ffffff;
   justify-content: center;
   padding-top: 10px;
+  vertical-align:bottom;
 }
 
-.col-3{
+#covid{
+  padding-right: 30px;
   text-align: right;
 }
-#covid{
-  padding-right: 10px;
-}
+
 
 .colorBox{
   float: left;

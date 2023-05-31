@@ -32,6 +32,7 @@
 	<div id="mySidenav" class="sidenav">
 		<div id="header">
 			<img class="flex-start" src="img/logo.png">
+			<div class="info bg-primary w-25"></div>
 			<div class="flex-end">
 				<a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			</div>
@@ -42,27 +43,31 @@
 		<div class="center">
 			<div>
 				<select name="countries" id="countDrop"><option value="0">Choose country</option></select>
-				<select name="countries" id="dateDrop"><option value="0">Choose date</option></select>
-				<input type="submit" value="Submit" onclick="getNewAPI()">
+				<!-- <select name="countries" id="dateDrop"><option value="0">Choose date</option></select> -->
+				<input type="submit" value="Submit" onclick="handleClickSubmit()">
 			</div>
 		</div>
 <!-------------------------- FOOTER  -------------------------------------->	
 
 		<div id="adat" class="row align-items-center">
-			<div class="col-2">
+			<div class="col-1">
+				<div class="colorBox" id="dotF"></div>
+				<p id="flag"><span></span></p>
+			</div>
+			<div class="col-3 justify-left">
 				<div class="colorBox" id="dotA"></div>
 				<p id="active"><span></span></p>
 			</div>
-			<div class="col-2">
+			<div class="col-3">
 				<div class="colorBox" id="dotD"></div>
 				<p id="deaths"></p>
 			</div>
-			<div class="col-5">
+			<div class="col-3">
 				<div class="colorBox" id="dotP"></div>
 				<p id="popul"></p>
 			</div>
-			<div class="col-3">
-				<p id="covid">data provided by: <span><a id="link" href="https://rapidapi.com/api-sports/api/covid-193/">https://rapidapi.com/covid</a></span></p>
+			<div class="col-2">
+				<p id="covid">data provided by: <span><a id="link" href="https://covid-api.com">covid-api.com</a></span></p>
 			</div>
 		</div>
 	</div>
