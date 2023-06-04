@@ -134,7 +134,7 @@ input {
 /************************************************ FOOTER ***********************************/
 
 #adat {
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 0;
   width: 101vw;

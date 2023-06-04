@@ -11,7 +11,6 @@ const countDrop = document.getElementById('countDrop');
 const dateDrop = document.getElementById('dateDrop');
 
 (async function () {
-    start ? document.getElementById('adat').setAttribute('style', 'display: none') : document.getElementById('adat').setAttribute('style', 'display: flex') ;
     // GET THE DAYS OF THE LAST 90 DAYS
     const x = [];
     for (let i = 200; i < 1000; i++) {
@@ -102,7 +101,7 @@ async function getPopulation(country) {
 }
 
 async function handleClickSubmit() {
-    start ? document.getElementById('adat').setAttribute('style', 'display: none') : document.getElementById('adat').setAttribute('style', 'display: flex') ;
+    
     const selectedDate = dateDrop.options[dateDrop.selectedIndex];
     const selectedOption = countDrop.options[countDrop.selectedIndex];
     const isoCovid = selectedOption.value;
@@ -117,6 +116,7 @@ async function handleClickSubmit() {
         popp = 1000 - activePercent * 10 - deathsPercent * 10;
         isOn = true;
         printData();
+        document.getElementById('adat').setAttribute('style', 'display: flex');
     } catch (error) {
         console.error(error);
     }
