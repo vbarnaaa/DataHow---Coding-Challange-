@@ -102,6 +102,7 @@ async function getPopulation(country) {
 }
 
 async function handleClickSubmit() {
+    start ? document.getElementById('adat').setAttribute('style', 'display: none') : document.getElementById('adat').setAttribute('style', 'display: flex') ;
     const selectedDate = dateDrop.options[dateDrop.selectedIndex];
     const selectedOption = countDrop.options[countDrop.selectedIndex];
     const isoCovid = selectedOption.value;
