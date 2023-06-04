@@ -11,6 +11,7 @@ const countDrop = document.getElementById('countDrop');
 const dateDrop = document.getElementById('dateDrop');
 
 (async function () {
+    start ? document.getElementById('adat').setAttribute('style', 'display: none') : document.getElementById('adat').setAttribute('style', 'display: flex') ;
     // GET THE DAYS OF THE LAST 90 DAYS
     const x = [];
     for (let i = 200; i < 1000; i++) {
@@ -121,7 +122,7 @@ async function handleClickSubmit() {
 }
 
 function printData() {
-    start ? document.getElementById('adat').setAttribute('style', 'display: none') : document.getElementById('adat').setAttribute('style', 'display: flex') ; 
+     
     document.getElementById('flag').innerText = flag;
     document.getElementById('active').innerHTML = `Active Cases: ${formatNumberWithDivisions(activeCases)} <span class='text-danger'>${activePercent.toFixed(2)}%</span>`;
     document.getElementById('deaths').innerHTML = `Deaths till date: ${formatNumberWithDivisions(ddeaths)} <span class='text-danger'>${deathsPercent.toFixed(2)}%</span>`;
