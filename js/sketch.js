@@ -2,7 +2,7 @@
 let particles = [];
 let active = [];
 let deaths = [];
-let isOn = false;
+// let isOn = false;
           
 /******** INITIALIZE THE PARTICLE SYSTEM ON LOAD ***************************/
 function setup() {
@@ -25,20 +25,20 @@ function setup() {
 /******** LOOP THAT LISTENS TO CHANGES ***************************/
 
 function draw() {
-  background(252);
+  background(254);
 
 /******** DELETING OLD AND ADDING NEW PARTICLES WHEN 'SUBMIT' CLICKED ***************************/
 
     if (isOn === true) {
         particles = [];active = [];deaths = []; // clear the array of previous particles
 
-        for ( let i = 0; i < activePercent*2; i++){    // creating an array of 'new cases' with number of new cases divided by 100
+        for ( let i = 0; i < activePercent; i++){    // creating an array of 'new cases' with number of new cases divided by 100
           active.push(new Active());
         }
-        for (let i = 0; i < popp*2; i++) { 
+        for (let i = 0; i < popp; i++) { 
           particles.push(new Particle());       // creating an array of 'populations' with number of country total population divided by 500 000
         }
-        for (let i = 0; i < deathsPercent*2; i++) {
+        for (let i = 0; i < deathsPercent; i++) {
           deaths.push(new Deaths());            // creating an array of 'deaths' with the number of new deaths
         }
         isOn = false;                           // disable function after arrays are generated

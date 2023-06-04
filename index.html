@@ -31,9 +31,11 @@
 
 	<div id="mySidenav" class="sidenav">
 		<div id="header">
-			<img class="flex-start" src="img/logo.png">
-			<div class="info bg-primary w-25"></div>
+			<div class="info w-25 h-25">
+
+			</div>
 			<div class="flex-end">
+
 				<a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			</div>
 		</div>
@@ -41,11 +43,11 @@
 <!-------------------------- DROPDOWN + SUBMIT BUTTON  -------------------------------------->	
 
 		<div class="center">
-			<div>
+
 				<select name="countries" id="countDrop"><option value="0">Choose country</option></select>
-				<!-- <select name="countries" id="dateDrop"><option value="0">Choose date</option></select> -->
-				<input type="submit" value="Submit" onclick="handleClickSubmit()">
-			</div>
+				<select name="countries" id="dateDrop"><option value="0">Choose date</option></select>
+				<input type="submit" value="Submit" onclick="handleClickSubmit()">	
+
 		</div>
 <!-------------------------- FOOTER  -------------------------------------->	
 
@@ -54,19 +56,19 @@
 				<div class="colorBox" id="dotF"></div>
 				<p id="flag"><span></span></p>
 			</div>
-			<div class="col-3 justify-left">
+			<div class="col-sm-5 col-md-3 justify-left">
 				<div class="colorBox" id="dotA"></div>
 				<p id="active"><span></span></p>
 			</div>
-			<div class="col-3">
+			<div class="col-sm-3 col-md-3">
 				<div class="colorBox" id="dotD"></div>
 				<p id="deaths"></p>
 			</div>
-			<div class="col-3">
+			<div class="col-sm-3 col-md-3">
 				<div class="colorBox" id="dotP"></div>
 				<p id="popul"></p>
 			</div>
-			<div class="col-2">
+			<div class="col-sm-0 col-md-2">
 				<p id="covid">data provided by: <span><a id="link" href="https://covid-api.com">covid-api.com</a></span></p>
 			</div>
 		</div>

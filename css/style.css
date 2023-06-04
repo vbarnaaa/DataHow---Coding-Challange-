@@ -1,9 +1,10 @@
-body{
-	margin: 0;
-	padding: 0;
-	font-family: "Lato", sans-serif;
-	overflow: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
 }
+
 /************************ NAVIGATION BAR ********************************************************/
 .sidenav {
   height: 0;
@@ -12,7 +13,7 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(20,20,20,0.01);
+  background-color: rgba(20, 20, 20, 0.01);
   overflow: hidden;
   transition: 0.5s;
 }
@@ -27,17 +28,21 @@ body{
   z-index: 0;
 }
 
-.click-text > p {
+.click-text>p {
   cursor: default;
 }
 
 #close {
+  width: 30px;
+  height: 30px;
   text-decoration: none;
   font-size: 50px;
-  color: #fe0002d4;/*#*/
+  color: #fe0002d4;
+  font-weight: bold;
+  /*#*/
   display: block;
   transition: 0.3s;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 
 .sidenav a:hover {
@@ -53,25 +58,54 @@ body{
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  select,
+  input {
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+  }
 }
 
-img{
+@media screen and (max-width: 750px) {
+
+  #dateDrop,
+  #countDrop,
+  input {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #covid, #flag {
+    display: none;
+  }
+}
+
+
+img {
   max-width: 50px;
   margin: 10px 0 0 10px;
 }
 
-#header{
+#header {
   display: flex;
 }
 
-#flag{
+#flag {
   font-size: 40px;
 }
 
 
-/**************************** DROWPDOWN *************************************************/ 
+/**************************** DROWPDOWN *************************************************/
 
 select {
   background-color: rgba(255, 255, 255, 0.7);
@@ -86,11 +120,11 @@ select {
   justify-content: center;
 }
 
-input{
+input {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.center{
+.center {
   margin-top: 20vh;
   position: absolute;
   left: 50%;
@@ -99,47 +133,46 @@ input{
 
 /************************************************ FOOTER ***********************************/
 
-#adat{
+#adat {
   display: flex;
   position: absolute;
   bottom: 0;
   width: 101vw;
-  background-color: rgba(255, 255, 255, 0.9); 
+  background-color: rgba(255, 255, 255, 0.9);
   padding-left: 20px;
   font-size: 15px;
   color: #394b8c;
   text-shadow: 0.2px 0.2px #ffffff;
   justify-content: center;
   padding-top: 10px;
-  vertical-align:bottom;
+  vertical-align: bottom;
 }
 
-#covid{
+#covid {
   padding-right: 30px;
   text-align: right;
 }
 
 
-.colorBox{
+.colorBox {
   float: left;
   width: 15px;
   height: 15px;
   margin: 5px;
 }
 
-#dotA{
+#dotA {
   background: #ff2600;
 }
-#dotD{
-  background: rgba(55,16,55,0.9);
-}
-#dotP{
-  background: rgba(20,16,69,0.3); 
+
+#dotD {
+  background: rgba(55, 16, 55, 0.9);
 }
 
-#link{
+#dotP {
+  background: rgba(20, 16, 69, 0.3);
+}
+
+#link {
   color: grey;
 }
-
-
-
