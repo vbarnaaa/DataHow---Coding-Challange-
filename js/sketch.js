@@ -32,7 +32,7 @@ function draw() {
     if (isOn === true) {
         particles = [];active = [];deaths = []; // clear the array of previous particles
 
-        for ( let i = 0; i < activePercent; i++){    // creating an array of 'new cases' with number of new cases divided by 100
+        for ( let i = 0; i < activePercent*2; i++){    // creating an array of 'new cases' with number of new cases divided by 100
           active.push(new Active());
         }
         for (let i = 0; i < popp; i++) { 

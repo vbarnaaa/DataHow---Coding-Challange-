@@ -13,8 +13,8 @@ const dateDrop = document.getElementById('dateDrop');
 (async function () {
     // GET THE DAYS OF THE LAST 90 DAYS
     const x = [];
-    for (let i = 200; i < 1000; i++) {
-        const today = new Date(2022, 0, 26);
+    for (let i = 0; i < 1000; i++) {
+        const today = new Date(2023, 0, 26);
         const ninety = today - 86400000 * i;
         const dates = dayjs(ninety).format('YYYY-MM-DD');
         x.push(dates);
@@ -64,15 +64,18 @@ function setAll() {
 
 async function getNewAPI(country, date) {
     console.log(date, country);
-    const newAPI = `https://covid-api.com/api/reports?${date}&iso=${country}`;
+    // https://covid-api.com/api/reports/total?date=2022-03-14&iso=USA
+
+    const newAPI = `https://covid-api.com/api/reports/total?date=${date}&iso=${country}`;
 
     try {
         const response = await fetch(newAPI);
         const data = await response.json();
-        console.log(data);
+        console.log(data.data);
 
-        activeCases = sumArray(data.data.map((item) => item.active));
-        ddeaths = sumArray(data.data.map((item) => item.deaths));
+        // activeCases = sumArray(data.data.map((item) => item.active));
+        activeCases = data.data.active;
+        ddeaths = data.data.deaths;
         printData();
 
     } catch (error) {
