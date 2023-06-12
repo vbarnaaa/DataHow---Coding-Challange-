@@ -34,8 +34,8 @@ class Active {
     this.x = random(0,width);
     this.y = random(0,height);
     this.r = random(5,10);
-    this.xSpeed = random(-2,2);
-    this.ySpeed = random(-1,1.5);
+    this.xSpeed = random(-1,1);
+    this.ySpeed = random(-0.5,0.5);
   }
 
 
