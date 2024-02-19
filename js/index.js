@@ -14,7 +14,7 @@ const dateDrop = document.getElementById('dateDrop');
     // GET THE DAYS OF THE LAST 90 DAYS
     const x = [];
     for (let i = 0; i < 1000; i++) {
-        const today = new Date(2023, 0, 26);
+        const today = new Date(2022, 0, 26);
         const ninety = today - 86400000 * i;
         const dates = dayjs(ninety).format('YYYY-MM-DD');
         x.push(dates);
@@ -128,7 +128,7 @@ async function handleClickSubmit() {
 function printData() {
      
     document.getElementById('flag').innerText = flag;
-    document.getElementById('active').innerHTML = `Active Cases: ${formatNumberWithDivisions(activeCases)} <span class='text-danger'>${activePercent.toFixed(2)}%</span>`;
+    document.getElementById('active').innerHTML = `Active cases: ${formatNumberWithDivisions(activeCases)} <span class='text-danger'>${activePercent.toFixed(2)}%</span>`;
     document.getElementById('deaths').innerHTML = `Deaths till date: ${formatNumberWithDivisions(ddeaths)} <span class='text-danger'>${deathsPercent.toFixed(2)}%</span>`;
     document.getElementById('popul').innerText = `Total Population: ${formatNumberWithDivisions(population)}`;
     
